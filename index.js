@@ -7,9 +7,9 @@ const chooseOptimalDistance = (t, k, Is) => {
     let countsList = [];
     let itemCount = 0;
     let letLen = Math.pow(k, Is.length);
-    for (var i = 0; i < letLen ; i++){
-        for (let j=0; j < Is.length; j++) {
-            if (( i & Math.pow(3, j) )){
+    for (let i = 0; i < letLen ; i++){
+        for (let j = 0; j < Is.length; j++) {
+            if (( i & Math.pow(k, j) )){
                 itemCount += Is[j];
             }
         }
